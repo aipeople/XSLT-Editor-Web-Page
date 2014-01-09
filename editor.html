@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="javascript/reveal/reveal.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet/less" type="text/css" href="less/general.less" />
+  
+  <script src="javascript/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="javascript/reveal/jquery.reveal.js" type="text/javascript"></script>
+  <script src="javascript/less-1.5.0.min.js" type="text/javascript"></script>
+  <script src="javascript/editor.js" type="text/javascript"></script>
+  <script src="javascript/XSLTParser.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+  	
+  	
+  	function pageOnLoad () {
+  		
+	}
+	
+	$(window).ready(pageOnLoad);
+  </script>
+</head>
+<body onkeydown="return body_keyDown(event)">
+	<div id="header">
+		<div class="topBar">
+			<div class="left logo">XSLT Editor</div>
+			<div class="middle">
+				<div class="segmentControl alignCenter" style="width:180px;">
+					<a>XML</a>
+					<a>XSLT</a>
+				</div>
+			</div>
+			<div class="right">
+				<a id="previewButton" 
+				   class="plainButton" 
+				   style="float:right;" 
+				   onclick="previewButton_onClick()">Preview</a>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div class="paper">
+		</div>
+	</div>
+	<a id="Test"></a>
+	<a id="SelectTemp" style="display:none;"></a>
+	
+	<!--Edit box-->
+	<a id="editBoxTrigger" href="#" data-reveal-id="editBox" data-closeonbackgroundclick="true" data-animation="fadeAndPop" style="display:none"></a>
+	<div id="editBox" class="reveal-modal xlarge">
+		<iframe id="htmlFrame"></iframe>
+	</div>
+</body>
+</html>
